@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E703EC3D-44F2-0CF4-FF49-0B963A577931}</ProjectGuid>
+    <ProjectGuid>{D47DA346-6562-7CD2-FC21-6E311D3CA1AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,11 +56,11 @@
     <Analyzer Include="E:\visual studio\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\ChangeColor.cs" />
     <Compile Include="Assets\Scenes\PourDetector.cs" />
     <Compile Include="Assets\Scenes\spill.cs" />
     <Compile Include="Assets\Scenes\Stream.cs" />
     <Compile Include="Assets\Scenes\ParticleSpill.cs" />
-    <Compile Include="Assets\Scenes\ChangeColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
