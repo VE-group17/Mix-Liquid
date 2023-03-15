@@ -375,14 +375,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327570141}
-  m_LocalRotation: {x: -0, y: 0.73313826, z: -0, w: 0.68007964}
-  m_LocalPosition: {x: -424.01004, y: 14.980036, z: 294.41}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 886931688783362026}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 94.3, z: 0}
+  m_Father: {fileID: 1673198359133438167}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!199 &1327570143
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5230,8 +5230,7 @@ Transform:
   m_LocalPosition: {x: 430.41003, y: -11.480036, z: -294.38004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1327570142}
+  m_Children: []
   m_Father: {fileID: 342501771}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5350,6 +5349,7 @@ Transform:
   - {fileID: 1285457670143207838}
   - {fileID: 342501771}
   - {fileID: 1686833823}
+  - {fileID: 1327570142}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5365,7 +5365,7 @@ GameObject:
   - component: {fileID: 1673198359133674744}
   m_Layer: 0
   m_Name: Bucket
-  m_TagString: Untagged
+  m_TagString: Bucket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5530,7 +5530,7 @@ GameObject:
   - component: {fileID: 8615171939383747547}
   - component: {fileID: 8615171939383747546}
   m_Layer: 0
-  m_Name: Bucket
+  m_Name: BucketMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

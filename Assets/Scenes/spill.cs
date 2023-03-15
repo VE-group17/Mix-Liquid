@@ -6,7 +6,7 @@ public class spill : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject mLiquid;
-    public GameObject mLiquidMesh;
+    //public GameObject mLiquidMesh;
     private int mSloshSpeed = 60;
     private int mRotateSpeed = 50;
     private int difference = 20;
