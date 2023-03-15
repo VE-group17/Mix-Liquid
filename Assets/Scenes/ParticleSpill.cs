@@ -8,16 +8,22 @@ public class ParticleSpill : MonoBehaviour
     //private bool isPouring = false;
     public int pourThreshold = 45;
     public Transform origin;
+    private Quaternion initialRotation;
     private GameObject bucket;
     private float r;
     private float initial_z;
     bool last_pouring = false;
     bool isPouring = false;
+    private int mSloshSpeed = 300;
+    private int mRotateSpeed = 50;
+    private int difference = 20;
+    public GameObject mLiquid;
     // Start is called before the first frame update
     void Start()
     {
         myParticleSystem = GetComponent<ParticleSystem>();
         bucket = GameObject.FindGameObjectWithTag("Bucket");
+        initialRotation = transform.rotation;
        // r = bucket.transform.localScale.x / 2;
        // initial_z = (float)(bucket.transform.localScale.z *0.5);
 
@@ -31,44 +37,42 @@ public class ParticleSpill : MonoBehaviour
     {
 
         bool pourCheck = (origin.up.y * Mathf.Rad2Deg) < pourThreshold;
-       
+
+        // transform.rotation = initialRotation;
 
         if (pourCheck)
         {
-            isPouring=true;
-         //   print(bucket.transform.localRotation.y) ;
-            if(!myParticleSystem.isPlaying) myParticleSystem.Play();
-           // print(transform.up);
-          //  if (last_pouring != isPouring) {
-           //     Quaternion rot = Quaternion.Euler(0, 0, 0);
-           //     if (transform.up.x<0.0f) rot = Quaternion.Euler(90, 0, 0);
-           //    myParticleSystem.transform.localRotation = rot;
+            isPouring = true;
+            //   print(bucket.transform.localRotation.y) ;
+            if (!myParticleSystem.isPlaying) myParticleSystem.Play();
+            // print(transform.up);
 
-               // myParticleSystem.transform.RotateAround(transform.position, transform.up, 90f * Time.deltaTime);
-           // }
-           // myParticleSystem.transform.RotateAround(transform.position, transform.parent.loc,135*Time.deltaTime);
-            last_pouring = true;
-            // float r = bucket.transform.localScale.x / 2;
+            if (last_pouring != isPouring)
+            {
+                transform.rotation = initialRotation;
+                if (origin.up.x < 0) transform.Rotate(new Vector3(0, 180, 0), Space.Self);
 
-           // float z = r * Mathf.Cos(bucket.transform.rotation.z);
-            //float x = r * Mathf.Cos(bucket.transform.rotation.x);
-            //print(bucket.transform.rotation.x);
-           // Vector3 new_pos = origin.localPosition + new Vector3(x, initial_z, 0);
-           // myParticleSystem.transform.position = origin.position + new Vector3(0, initial_z, 0);
-            // print(new_pos);
-            //float x = bucket.transform.localScale.x;
-            //print(bucket.transform.rotation.z);
-            //myParticleSystem.transform.localPosition = new Vector3(myParticleSystem.transform.localPosition.x+x, myParticleSystem.transform.localPosition.y, myParticleSystem.transform.localPosition.z+z); 
+                else if (origin.up.z < 0) transform.Rotate(new Vector3(0, 90, 0), Space.Self);
 
+                else if (origin.up.z > 0) transform.Rotate(new Vector3(0, -90, 0), Space.Self);
+                else transform.Rotate(new Vector3(0, 0, 0), Space.Self);
+                last_pouring = true;
+
+            }
         }
         else
         {
+            //transform.rotation = initial_coord.rotation;
+
             isPouring = false;
             if (myParticleSystem.isPlaying) myParticleSystem.Stop();
-            last_pouring=false;
-            
-          
+           // if (last_pouring != isPouring) transform.rotation = initialRotation;
+
+            last_pouring = false;
+
+
         }
 
     }
+
 }

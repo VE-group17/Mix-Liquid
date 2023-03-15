@@ -8,7 +8,7 @@ public class spill : MonoBehaviour
     public GameObject mLiquid;
     //public GameObject mLiquidMesh;
     private int mSloshSpeed = 60;
-    private int mRotateSpeed = 50;
+    private int mRotateSpeed = 80;
     private int difference = 20;
 
     // Update is called once per frame

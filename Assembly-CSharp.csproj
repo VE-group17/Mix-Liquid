@@ -61,7 +61,6 @@
     <Compile Include="Assets\Scenes\spill.cs" />
     <Compile Include="Assets\Scenes\Stream.cs" />
     <Compile Include="Assets\Scenes\ParticleSpill.cs" />
-    <Compile Include="Assets\Scenes\spill_initial_dir.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

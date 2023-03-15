@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChangeColor : MonoBehaviour
 {
     ParticleSystem myParticleSystem;
+    public Color color;
     private Renderer parent_renderer;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class ChangeColor : MonoBehaviour
         Color ParentColor = parent_renderer.material.color;
         print(ParentColor);
         // Call SetColor using the shader property name "_Color" and setting the color to red
-        Renderer.material.SetColor("_Color", Color.green);
+        Renderer.material.SetColor("_Color", color);
     }
 
 
