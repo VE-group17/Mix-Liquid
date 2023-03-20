@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bucket
+  - redDrop
+  - blueDrop
+  - greenDrop
   layers:
   - Default
   - TransparentFX
